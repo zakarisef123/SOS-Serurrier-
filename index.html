@@ -1,222 +1,633 @@
 <!doctype html>
+
 <html lang="fr">
+
 <head>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18049108666"></script>
+
     <script>
+
       window.dataLayer = window.dataLayer || [];
+
       function gtag(){dataLayer.push(arguments);}
+
       gtag('js', new Date());
+
+
+
       gtag('config', 'AW-18049108666');
+
     </script>
 
+
+
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+
     <meta name="theme-color" content="#0f172a" />
-    <title>Serrurier Var, Marseille & 06 : Dépannage Ultra-Rapide | SOS SERRURIER</title>
+
+    <title>Serrurier Var : Dépannage Ultra-Rapide | SOS SERRURIER</title>
+
     
+
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=DM+Sans:wght@700;800&display=swap" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=DM+Sans:wght@700;800&display=swap" rel="stylesheet" />
+
+
 
     <style>
+
         :root {
+
             --primary-orange: #f97316;
+
             --primary-blue: #3b82f6;
-            --slate-950: #020617;
+
             --slate-900: #0f172a;
-            --glass-border: rgba(255, 255, 255, 0.08);
+
+            --slate-800: #1e293b;
+
+            --slate-50: #f8fafc;
+
+            --slate-400: #94a3b8;
+
         }
+
+
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: var(--slate-950); color: #f8fafc; font-family: 'Plus Jakarta Sans', sans-serif; -webkit-font-smoothing: antialiased; line-height: 1.6; scroll-behavior: smooth; }
 
-        @keyframes pulse-orange {
-            0% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(249, 115, 22, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0); }
+        
+
+        body { 
+
+            background-color: var(--slate-900); 
+
+            color: var(--slate-50); 
+
+            font-family: 'Inter', system-ui, sans-serif; 
+
+            -webkit-font-smoothing: antialiased;
+
+            line-height: 1.5;
+
+            scroll-behavior: smooth;
+
         }
 
-        /* Ticker Assurances */
-        .assurance-ticker { background: #ffffff; padding: 15px 0; overflow: hidden; display: flex; border-bottom: 1px solid #e2e8f0; }
-        .ticker-track { display: flex; gap: 60px; animation: scroll 40s linear infinite; white-space: nowrap; align-items: center; }
-        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        .ticker-track span { font-weight: 800; font-size: 0.7rem; color: #64748b; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 5px; }
 
-        /* Navigation */
-        header { position: fixed; top: 0; width: 100%; height: 90px; background: rgba(2, 6, 23, 0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--glass-border); display: flex; align-items: center; justify-content: space-between; padding: 0 8%; z-index: 1000; }
-        .logo { font-family: 'DM Sans'; font-weight: 800; font-size: 1.4rem; color: white; text-decoration: none; }
-        .logo span { color: var(--primary-orange); }
 
-        /* Icons Styles */
-        .icon-pro { width: 24px; height: 24px; fill: currentColor; }
-        .icon-large { width: 48px; height: 48px; fill: var(--primary-orange); margin-bottom: 20px; }
+        @keyframes pulse-orange {
 
-        .floating-phone { position: fixed; bottom: 30px; right: 30px; background: var(--primary-orange); width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 9999; animation: pulse-orange 2s infinite; }
+            0% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.7); }
+
+            70% { box-shadow: 0 0 0 12px rgba(249, 115, 22, 0); }
+
+            100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0); }
+
+        }
+
+
+
+        .floating-phone {
+
+            position: fixed; bottom: 20px; right: 20px;
+
+            background: var(--primary-orange); width: 65px; height: 65px;
+
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+
+            z-index: 9999; text-decoration: none; animation: pulse-orange 2s infinite;
+
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+        }
+
+        .floating-phone svg { width: 30px; height: 30px; fill: white; }
+
+
+
+        #cookie-banner {
+
+            position: fixed; bottom: 20px; left: 20px; width: 320px;
+
+            background: rgba(15, 23, 42, 0.98); border: 1px solid rgba(255,255,255,0.1);
+
+            backdrop-filter: blur(10px); padding: 20px; border-radius: 12px;
+
+            z-index: 10000; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+
+        }
+
+        .cookie-btns { display: flex; gap: 8px; margin-top: 10px; }
+
+        .cookie-btns button { flex: 1; padding: 8px; border-radius: 6px; border: none; font-weight: 700; cursor: pointer; }
+
+        .accept-cook { background: var(--primary-orange); color: white; }
+
+        .refuse-cook { background: transparent; color: white; border: 1px solid rgba(255,255,255,0.2); }
+
+
+
+        header {
+
+            position: fixed; top: 0; width: 100%; height: 80px;
+
+            background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+
+            display: flex; align-items: center; justify-content: space-between;
+
+            padding: 0 5%; z-index: 1000;
+
+        }
+
+
+
+        .logo { 
+
+            font-family: 'DM Sans'; 
+
+            font-weight: 800; 
+
+            font-size: 1.5rem; 
+
+            text-transform: uppercase; 
+
+            color: var(--primary-orange); 
+
+            text-decoration: none; 
+
+        }
+
         
-        .hero { padding: 240px 8% 120px; background: linear-gradient(rgba(2, 6, 23, 0.6), rgba(2, 6, 23, 0.8)), url('https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?q=80&w=2000&auto=format&fit=crop'); background-size: cover; background-position: center; text-align: center; }
-        .btn-pulse { padding: 22px 45px; border-radius: 18px; font-weight: 800; text-decoration: none; display: inline-block; background: var(--primary-orange); color: white; animation: pulse-orange 2s infinite; }
 
-        .why-us { padding: 100px 8%; background: white; color: var(--slate-900); }
-        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
-        .why-card { padding: 40px; border-radius: 30px; background: #f8fafc; border: 1px solid #e2e8f0; transition: 0.3s; }
-        .why-card:hover { border-color: var(--primary-orange); }
+        nav.desktop-nav { display: flex; gap: 30px; }
 
-        .services-section { background-color: white; color: var(--slate-900); padding: 100px 8%; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1300px; margin: 0 auto; }
-        .service-card { background: white; padding: 40px; border-radius: 30px; border: 1px solid #f1f5f9; text-decoration: none; color: inherit; transition: 0.4s; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
-        .service-card:hover { transform: translateY(-10px); border-color: var(--primary-orange); }
+        nav.desktop-nav a { color: var(--slate-400); text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
 
-        .contact-section { padding: 120px 8%; background: var(--slate-950); }
-        .contact-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .form-card { background: white; padding: 50px; border-radius: 40px; color: var(--slate-900); }
-        .btn-submit-pulse { width: 100%; background: var(--primary-orange); color: white; padding: 20px; border-radius: 15px; border: none; font-weight: 800; animation: pulse-orange 2.5s infinite; cursor: pointer; }
+        nav.desktop-nav a:hover { color: white; }
 
-        #cookie-banner { position: fixed; bottom: 30px; left: 30px; width: 380px; background: rgba(15, 23, 42, 0.98); border: 1px solid var(--glass-border); backdrop-filter: blur(20px); padding: 30px; border-radius: 25px; z-index: 10000; }
 
-        .zone-badge { padding: 12px 25px; border: 1px solid #e2e8f0; border-radius: 15px; font-weight: 700; display: inline-block; margin: 8px; color: var(--primary-blue); }
 
-        @media (max-width: 992px) { .contact-container { grid-template-columns: 1fr; } }
+        .btn-nav-devis { background: var(--primary-orange); color: white; padding: 12px 24px; border-radius: 10px; text-decoration: none; font-weight: 800; font-size: 0.85rem; animation: pulse-orange 2.5s infinite; }
+
+
+
+        .hero {
+
+            padding: 180px 5% 100px; text-align: center;
+
+            background: radial-gradient(circle at top right, #1e293b, #0f172a);
+
+        }
+
+        .transition-divider {
+
+            height: 150px;
+
+            background: linear-gradient(180deg, #0f172a 0%, var(--slate-50) 100%);
+
+        }
+
+        .hero h1 { font-family: 'DM Sans'; font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 20px; }
+
+        .hero p { color: var(--slate-400); max-width: 700px; margin: 0 auto 40px; font-size: 1.1rem; }
+
+        
+
+        .btn-hero-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+
+        .btn-main { padding: 16px 32px; border-radius: 12px; font-weight: 800; text-decoration: none; font-size: 1rem; transition: 0.3s; border: none; cursor: pointer; }
+
+        .btn-orange { background: var(--primary-orange); color: white; animation: pulse-orange 2s infinite; }
+
+        .btn-outline { background: transparent; color: white; border: 1px solid rgba(255,255,255,0.2); }
+
+
+
+        .features { padding: 80px 5% 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
+
+        .feature-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); padding: 30px; border-radius: 20px; text-align: center; }
+
+        .feature-card svg { width: 40px; height: 40px; fill: var(--primary-orange); margin-bottom: 15px; }
+
+
+
+        .services-section { background-color: var(--slate-50); color: var(--slate-900); padding: 0 5% 100px; }
+
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 40px auto 0; }
+
+        .service-card { background: white; padding: 40px; border-radius: 24px; border: 1px solid #cbd5e1; text-decoration: none; color: inherit; display: block; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); transition: 0.3s; }
+
+        .service-card:hover { transform: translateY(-10px); border-color: var(--primary-blue); }
+
+        .service-card h3 { font-family: 'DM Sans'; margin-bottom: 10px; font-size: 1.4rem; }
+
+        .price-tag { color: var(--primary-blue); font-weight: 800; font-size: 1.1rem; margin-bottom: 15px; display: block; }
+
+        .btn-devis-small { display: inline-block; margin-top: 20px; font-weight: 800; background: var(--primary-orange); color: white; padding: 10px 20px; border-radius: 8px; font-size: 0.85rem; text-transform: uppercase; animation: pulse-orange 2s infinite; }
+
+
+
+        .contact-section { padding: 100px 5%; background: linear-gradient(180deg, var(--slate-50) 0%, #1e3a8a 10%, #0f172a 100%); }
+
+        .contact-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 50px; align-items: center; }
+
+        .contact-info h2 { font-size: clamp(2.5rem, 5vw, 3rem); font-family: 'DM Sans'; margin-bottom: 20px; color: white; }
+
+        .phone-box-large { border: 2px solid white; padding: 30px; border-radius: 20px; display: block; text-decoration: none; color: white; text-align: center; margin-top: 30px; animation: pulse-orange 2s infinite; }
+
+        .phone-box-large span { font-size: 2.2rem; font-weight: 800; color: var(--primary-orange); display: block; }
+
+
+
+        .form-card { background: white; padding: 40px; border-radius: 24px; color: var(--slate-900); }
+
+        .form-group { margin-bottom: 15px; }
+
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 14px; border: 1px solid #e2e8f0; border-radius: 12px; font-family: inherit; font-size: 1rem; }
+
+        .btn-submit { width: 100%; background: var(--primary-orange); color: white; padding: 18px; border-radius: 12px; border: none; font-weight: 800; animation: pulse-orange 2.5s infinite; margin-bottom: 10px; }
+
+        .form-footer { font-size: 0.75rem; color: #64748b; text-align: center; }
+
+
+
+        .zones { padding: 80px 5%; text-align: center; background: white; color: var(--slate-900); }
+
+        .zone-badge { padding: 10px 20px; border: 1px solid var(--primary-blue); border-radius: 50px; font-weight: 700; color: var(--primary-blue); display: inline-block; margin: 6px; }
+
+
+
+        footer { background: #000; padding: 80px 5% 40px; color: var(--slate-400); display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; }
+
+        footer h4 { color: white; margin-bottom: 20px; }
+
+        footer a { color: var(--slate-400); text-decoration: none; display: block; margin-bottom: 10px; transition: 0.3s; }
+
+        footer a:hover { color: var(--primary-orange); }
+
+
+
+        @media (max-width: 600px) {
+
+            header { height: 70px; padding: 0 4%; }
+
+            .logo { font-size: 1.1rem; }
+
+            .btn-nav-devis { padding: 8px 12px; font-size: 0.75rem; }
+
+            .desktop-nav { display: none; }
+
+            .hero { padding: 130px 5% 60px; }
+
+            .hero h1 { font-size: 2.1rem; }
+
+            .btn-hero-group { flex-direction: column; }
+
+            .btn-main { width: 100%; }
+
+            .service-card { padding: 25px; }
+
+            .contact-info h2 { font-size: 2rem; text-align: center; }
+
+            .phone-box-large span { font-size: 1.7rem; }
+
+            .form-card { padding: 25px; margin-top: 20px; }
+
+            #cookie-banner { width: calc(100% - 40px); left: 20px; bottom: 20px; }
+
+        }
+
     </style>
+
 </head>
+
 <body>
 
+
+
     <div id="cookie-banner">
-        <h3 style="color: white; font-size: 1.1rem; margin-bottom: 12px; font-weight: 800;">Politique de confidentialité</h3>
-        <p style="color: #94a3b8; font-size: 0.8rem; line-height: 1.6; margin-bottom: 20px;">Nous utilisons des traceurs pour sécuriser vos demandes d'intervention et optimiser nos services dans le Var, Marseille et le 06.</p>
-        <div style="display: flex; gap: 10px;">
-            <button onclick="this.closest('#cookie-banner').style.display='none'" style="flex: 1; background: var(--primary-orange); color: white; padding: 12px; border-radius: 10px; border: none; font-weight: 800; cursor: pointer;">Accepter</button>
-            <button onclick="this.closest('#cookie-banner').style.display='none'" style="flex: 1; background: rgba(255,255,255,0.05); color: white; border: 1px solid var(--glass-border); padding: 12px; border-radius: 10px; cursor: pointer;">Refuser</button>
+
+        <p><strong>🍪 Cookies</strong><br>Nous utilisons des cookies pour votre expérience.</p>
+
+        <div class="cookie-btns">
+
+            <button class="accept-cook" onclick="this.closest('#cookie-banner').style.display='none'">OK</button>
+
+            <button class="refuse-cook" onclick="this.closest('#cookie-banner').style.display='none'">Non</button>
+
         </div>
+
     </div>
 
-    <div class="assurance-ticker">
-        <div class="ticker-track">
-            <span><svg class="icon-pro" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg> AXA ASSURANCE</span>
-            <span><svg class="icon-pro" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg> ALLIANZ</span>
-            <span><svg class="icon-pro" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg> MAIF</span>
-            <span><svg class="icon-pro" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg> GROUPAMA</span>
-            <span><svg class="icon-pro" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg> GENERALI</span>
-            <span><svg class="icon-pro" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg> AXA ASSURANCE</span>
-            <span><svg class="icon-pro" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg> ALLIANZ</span>
-        </div>
-    </div>
+
 
     <a href="tel:0753730112" class="floating-phone">
+
         <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1H7c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+
     </a>
 
+
+
     <header>
-        <a href="#accueil" class="logo">SOS <span>SERRURIER</span></a>
-        <a href="#contact" class="btn-nav-devis" style="animation: pulse-orange 2s infinite; text-decoration:none;">DEVIS GRATUIT</a>
+
+        <a href="#accueil" class="logo">Sos Serrurier</a>
+
+        <nav class="desktop-nav">
+
+            <a href="#accueil">Accueil</a>
+
+            <a href="#services">Services</a>
+
+            <a href="#intervention">Zones</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+        <div class="header-actions">
+
+            <a href="#contact" class="btn-nav-devis">DEVIS GRATUIT</a>
+
+        </div>
+
     </header>
 
+
+
     <section class="hero" id="accueil">
-        <p style="color: var(--primary-orange); font-weight: 800; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 20px;">Dépannage d'Urgence 24h/7j</p>
-        <h1>Expertise en Serrurerie <br><span style="color: var(--primary-orange)">Var, Marseille & 06</span></h1>
-        <div style="margin-top: 40px;">
-            <a href="tel:0753730112" class="btn-pulse">APPELER LE 07 53 73 01 12</a>
+
+        <p style="color: var(--primary-blue); font-weight: 800; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; margin-bottom: 10px;">Urgence Var (83)</p>
+
+        <h1><span style="color: var(--primary-orange)">Sos Serrurier</span> <br>Dépannage 24/7</h1>
+
+        <p>Une porte claquée ou une serrure bloquée ? Nos artisans interviennent en 30 minutes pour votre sécurité.</p>
+
+        <div class="btn-hero-group">
+
+            <a href="tel:0753730112" class="btn-main btn-orange">📞 APPELER LE 07 53 73 01 12</a>
+
+            <a href="#contact" class="btn-main btn-outline">DEMANDER UN DEVIS</a>
+
         </div>
+
+
+
+        <div class="features">
+
+            <div class="feature-card">
+
+                <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+
+                <h4>Artisan Certifié</h4>
+
+            </div>
+
+            <div class="feature-card">
+
+                <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6z"/></svg>
+
+                <h4>Prix Fixes</h4>
+
+            </div>
+
+            <div class="feature-card">
+
+                <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2z"/></svg>
+
+                <h4>Dispo 24/7</h4>
+
+            </div>
+
+        </div>
+
     </section>
 
-    <section class="why-us">
-        <div style="text-align: center; margin-bottom: 60px;">
-            <h2 style="font-family: 'DM Sans'; font-size: 2.5rem;">Pourquoi travailler avec nous ?</h2>
-        </div>
-        <div class="why-grid">
-            <div class="why-card">
-                <svg class="icon-large" viewBox="0 0 24 24"><path d="M13 3l-2 0l0 7l-7 0l0 2l7 0l0 7l2 0l0 -7l7 0l0 -2l-7 0l0 -7z"/></svg>
-                <h4>Réactivité Immédiate</h4>
-                <p>Nos techniciens locaux interviennent en moins de 30 minutes pour toutes vos urgences.</p>
-            </div>
-            <div class="why-card">
-                <svg class="icon-large" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
-                <h4>Tarification Transparente</h4>
-                <p>Prix ferme annoncé avant toute intervention. Agrément toutes assurances pour vos remboursements.</p>
-            </div>
-            <div class="why-card">
-                <svg class="icon-large" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
-                <h4>Sécurité Certifiée</h4>
-                <p>Installation de matériels haute sécurité A2P pour une protection optimale de votre foyer.</p>
-            </div>
-        </div>
-    </section>
+
+
+    <div class="transition-divider"></div>
+
+
 
     <section class="services-section" id="services">
-        <div class="services-grid">
-            <a href="#contact" class="service-card">
-                <svg class="icon-large" viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/></svg>
-                <h3>Ouverture de porte</h3>
-                <span style="color:var(--primary-blue); font-weight:800; display:block; margin:10px 0;">Dès 50€</span>
-                <p>Porte claquée ou verrouillée. Ouverture sans dégâts sur le bâti.</p>
-            </a>
-            <a href="#contact" class="service-card">
-                <svg class="icon-large" viewBox="0 0 24 24"><path d="M12.65 10C11.83 7.67 9.61 6 7 6c-3.31 0-6 2.69-6 6s2.69 6 6 6c2.61 0 4.83-1.67 5.65-4H17v4h4v-4h2v-4H12.65zM7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
-                <h3>Changement Serrure</h3>
-                <span style="color:var(--primary-blue); font-weight:800; display:block; margin:10px 0;">Devis Gratuit</span>
-                <p>Remplacement par du matériel haute sécurité toutes marques.</p>
-            </a>
-            <a href="#contact" class="service-card">
-                <svg class="icon-large" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
-                <h3>Mise en sécurité</h3>
-                <span style="color:var(--primary-blue); font-weight:800; display:block; margin:10px 0;">Urgence 24h/7j</span>
-                <p>Sécurisation immédiate après cambriolage ou perte de clés.</p>
-            </a>
+
+        <div style="text-align: center; margin-bottom: 30px;">
+
+            <p style="color: var(--primary-blue); font-weight: 800; text-transform: uppercase; font-size: 0.9rem;">Expertise</p>
+
+            <h2 style="font-family: 'DM Sans'; font-size: 2.2rem;">Nos Services & Tarifs</h2>
+
         </div>
+
+        <div class="services-grid">
+
+            <a href="#contact" class="service-card">
+
+                <h3>🚪 Ouverture porte claquée</h3>
+
+                <span class="price-tag">À partir de 50€</span>
+
+                <p>Ouverture technique sans dégât pour les portes non verrouillées.</p>
+
+                <div class="btn-devis-small">Réserver ></div>
+
+            </a>
+
+            <a href="#contact" class="service-card">
+
+                <h3>🔒 Ouverture porte fermée</h3>
+
+                <span class="price-tag">À partir de 100€</span>
+
+                <p>Ouverture de porte verrouillée à clé avec matériel professionnel.</p>
+
+                <div class="btn-devis-small">Réserver ></div>
+
+            </a>
+
+            <a href="#contact" class="service-card">
+
+                <h3>🛡️ Ouverture porte blindée</h3>
+
+                <span class="price-tag">À partir de 180€</span>
+
+                <p>Intervention experte sur portes haute sécurité et blindages A2P.</p>
+
+                <div class="btn-devis-small">Réserver ></div>
+
+            </a>
+
+            <a href="#contact" class="service-card">
+
+                <h3>🔑 Changement de serrure</h3>
+
+                <span class="price-tag">Sur Devis Gratuit</span>
+
+                <p>Remplacement immédiat toutes marques (Fichet, Picard, Vachette...).</p>
+
+                <div class="btn-devis-small">Demander prix ></div>
+
+            </a>
+
+            <a href="#contact" class="service-card">
+
+                <h3>🏗️ Blindage de porte</h3>
+
+                <span class="price-tag">Sur Devis Gratuit</span>
+
+                <p>Renforcement de votre porte actuelle pour une sécurité optimale.</p>
+
+                <div class="btn-devis-small">Demander prix ></div>
+
+            </a>
+
+            <a href="#contact" class="service-card">
+
+                <h3>🆘 Mise en sécurité</h3>
+
+                <span class="price-tag">Urgence 24/7</span>
+
+                <p>Fermeture provisoire après effraction ou perte de clés.</p>
+
+                <div class="btn-devis-small">Urgence ></div>
+
+            </a>
+
+        </div>
+
     </section>
+
+
 
     <section class="contact-section" id="contact">
+
         <div class="contact-container">
-            <div>
-                <h2 style="color: white; font-family: 'DM Sans';">Une urgence ? <br>On arrive.</h2>
-                <p style="color: #94a3b8; margin: 20px 0 40px;">Permanence téléphonique active pour tout dépannage immédiat dans le Sud-Est.</p>
-                <div style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 30px; text-align: center;">
-                    <a href="tel:0753730112" style="color: var(--primary-orange); font-size: 2.5rem; font-weight: 800; text-decoration: none;">07 53 73 01 12</a>
-                </div>
+
+            <div class="contact-info">
+
+                <h2>Service d'Urgence Actif</h2>
+
+                <p>Besoin d'un serrurier en urgence ? On arrive !</p>
+
+                <a href="tel:0753730112" class="phone-box-large">
+
+                    PERMANENCE 24/7
+
+                    <span>07 53 73 01 12</span>
+
+                </a>
+
             </div>
+
             <div class="form-card">
+
                 <form action="https://formspree.io/f/Sosfrance.contact@gmail.com" method="POST">
-                    <input type="text" name="nom" placeholder="Votre Nom" required style="width: 100%; padding: 18px; border-radius: 12px; border: 1px solid #e2e8f0; margin-bottom: 15px;">
-                    <input type="tel" name="tel" placeholder="Votre Téléphone" required style="width: 100%; padding: 18px; border-radius: 12px; border: 1px solid #e2e8f0; margin-bottom: 15px;">
-                    <select name="service" required style="width: 100%; padding: 18px; border-radius: 12px; border: 1px solid #e2e8f0; margin-bottom: 15px;">
-                        <option value="" disabled selected>Nature de l'intervention...</option>
-                        <option value="Ouverture">Ouverture de porte</option>
-                        <option value="Serrure">Changement de serrure</option>
-                        <option value="Sécurité">Mise en sécurité</option>
-                    </select>
-                    <textarea name="message" placeholder="Ville et détails..." rows="3" style="width: 100%; padding: 18px; border-radius: 12px; border: 1px solid #e2e8f0; margin-bottom: 20px;"></textarea>
-                    <button type="submit" class="btn-submit-pulse">DEMANDER UNE INTERVENTION</button>
+
+                    <div class="form-group"><input type="text" name="nom" placeholder="Votre Nom" required></div>
+
+                    <div class="form-group"><input type="tel" name="tel" placeholder="Téléphone" required></div>
+
+                    <div class="form-group">
+
+                        <select name="service" required>
+
+                            <option value="" disabled selected>Choisir un service...</option>
+
+                            <option value="Ouverture porte claquée (50€)">Ouverture porte claquée (dès 50€)</option>
+
+                            <option value="Ouverture porte fermée (100€)">Ouverture porte fermée (dès 100€)</option>
+
+                            <option value="Ouverture porte blindée (180€)">Ouverture porte blindée (dès 180€)</option>
+
+                            <option value="Changement de serrure">Changement de serrure (Devis)</option>
+
+                            <option value="Blindage de porte">Blindage de porte (Devis)</option>
+
+                            <option value="Mise en sécurité">Mise en sécurité d'urgence</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group"><textarea name="message" placeholder="Votre ville et détails de l'intervention..." rows="2"></textarea></div>
+
+                    <button type="submit" class="btn-submit">ÊTRE APPELÉ IMMÉDIATEMENT</button>
+
+                    <p class="form-footer">🛡️ Vos données sont sécurisées et ne seront jamais partagées.</p>
+
                 </form>
+
             </div>
+
         </div>
+
     </section>
+
+
 
     <section class="zones" id="intervention">
-        <h2 style="font-family: 'DM Sans'; margin-bottom: 30px;">Zones d'Intervention prioritaires</h2>
-        <div>
-            <span class="zone-badge">VAR (83) : Toulon, Hyères, Fréjus, Draguignan</span>
-            <span class="zone-badge">MARSEILLE (13) : Aubagne, La Ciotat, Tous secteurs</span>
-            <span class="zone-badge">ALPES-MARITIMES (06) : Nice, Cannes, Antibes, Grasse</span>
+
+        <h2 style="font-family: 'DM Sans'; margin-bottom: 20px;">Zones d'intervention</h2>
+
+        <div class="zones-grid">
+
+            <span class="zone-badge">Toulon</span><span class="zone-badge">La Seyne</span><span class="zone-badge">Hyères</span><span class="zone-badge">Fréjus</span><span class="zone-badge">Draguignan</span><span class="zone-badge">Saint-Tropez</span><span class="zone-badge">Six-Fours</span>
+
         </div>
+
     </section>
 
-    <footer style="background: #010409; padding: 80px 8%; color: #94a3b8; border-top: 1px solid var(--glass-border);">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 50px;">
-            <div>
-                <h4 style="color: white; margin-bottom: 20px;">SOS SERRURIER</h4>
-                <p>Expertise artisanale pour le dépannage de serrurerie en urgence dans tout le Sud de la France.</p>
-                <p style="margin-top: 15px; font-size: 0.7rem;">SIRET: 994 413 227 00012</p>
-            </div>
-            <div>
-                <h4 style="color: white; margin-bottom: 20px;">Ligne Directe</h4>
-                <a href="tel:0753730112" style="color: var(--primary-orange); font-weight: 800; font-size: 1.2rem; text-decoration: none;">07 53 73 01 12</a>
-            </div>
-            <div>
-                <h4 style="color: white; margin-bottom: 20px;">Informations</h4>
-                <a href="#" style="color: #94a3b8; text-decoration: none; display: block; margin-bottom: 10px;">Mentions Légales</a>
-                <a href="#" style="color: #94a3b8; text-decoration: none;">Confidentialité</a>
-            </div>
+
+
+    <footer>
+
+        <div>
+
+            <h4 style="color: var(--primary-orange);">SOS SERRURIER</h4>
+
+            <p>Serrurerie d'urgence Var (83).<br>SIRET: 994 413 227 00012</p>
+
         </div>
+
+        <div>
+
+            <h4>Contact Rapide</h4>
+
+            <a href="tel:0753730112" style="color: var(--primary-orange); font-weight: 800; font-size: 1.2rem;">07 53 73 01 12</a>
+
+            <p>Sosfrance.contact@gmail.com</p>
+
+        </div>
+
+        <div>
+
+            <h4>Informations Légales</h4>
+
+            <a href="#accueil">Mentions Légales</a>
+
+            <a href="#accueil">Politique de Confidentialité</a>
+
+            <a href="#accueil">Conditions Générales (CGV)</a>
+
+        </div>
+
     </footer>
 
+
+
 </body>
+
+</html>
+
+</body>
+
 </html>
