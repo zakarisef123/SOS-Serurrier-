@@ -43,14 +43,30 @@
             border-bottom: 1px solid #e2e8f0; display: flex; align-items: center;
             justify-content: space-between; padding: 0 5%; z-index: 1000;
         }
-        .logo-container { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-        .logo-text { font-weight: 800; font-size: 1.4rem; color: var(--secondary); text-transform: uppercase; }
+        .logo-container { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        
+        /* STYLE DU NOUVEAU LOGO DANS L'AIR PRO */
+        .logo-icon-pro { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            width: 44px; 
+            height: 44px; 
+            background: var(--white); 
+            border-radius: 10px; 
+            box-shadow: 0 4px 6px rgba(15, 23, 42, 0.08); 
+            border: 1px solid #e2e8f0;
+        }
+        
+        .logo-text { font-weight: 800; font-size: 1.5rem; color: var(--secondary); text-transform: uppercase; letter-spacing: -0.5px; }
+        .logo-text span { color: var(--primary); }
         
         nav.main-nav { display: flex; gap: 20px; }
-        nav.main-nav a { text-decoration: none; color: var(--secondary); font-weight: 600; font-size: 0.9rem; }
+        nav.main-nav a { text-decoration: none; color: var(--secondary); font-weight: 600; font-size: 0.9rem; transition: 0.2s; }
+        nav.main-nav a:hover { color: var(--primary); }
 
-        .nav-phone { color: var(--success); font-weight: 800; text-decoration: none; font-size: 1.2rem; border: 2px solid var(--success); padding: 8px 15px; border-radius: 10px; transition: 0.3s; }
-        .nav-phone:hover { background: var(--success); color: white; }
+        .nav-phone { color: var(--success); font-weight: 800; text-decoration: none; font-size: 1.2rem; border: 2px solid var(--success); padding: 8px 18px; border-radius: 10px; transition: 0.3s; }
+        .nav-phone:hover { background: var(--success); color: white; box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3); }
 
         .hero {
             padding: 220px 5% 120px;
@@ -71,7 +87,8 @@
 
         .services-section { padding: 80px 5%; background: var(--bg-light); }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; }
-        .service-card { background: white; padding: 35px; border-radius: 20px; border: 1px solid #e2e8f0; text-align: center; }
+        .service-card { background: white; padding: 35px; border-radius: 20px; border: 1px solid #e2e8f0; text-align: center; transition: 0.3s; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05); border-color: var(--primary); }
         .price-tag { font-size: 1.5rem; font-weight: 800; color: var(--primary); display: block; margin-bottom: 10px; }
         .service-description { font-size: 0.95rem; color: #64748b; margin-bottom: 20px; }
 
@@ -83,23 +100,27 @@
 
         .zones { padding: 80px 5%; text-align: center; background: var(--bg-light); }
         .zone-group { margin-bottom: 30px; text-align: left; max-width: 1200px; margin: 0 auto 40px; }
-        .zone-badge { padding: 6px 14px; border: 1px solid #e2e8f0; border-radius: 6px; font-weight: 600; color: #475569; display: inline-block; margin: 4px; font-size: 0.85rem; background: #f8fafc; }
+        .zone-badge { padding: 6px 14px; border: 1px solid #e2e8f0; border-radius: 6px; font-weight: 600; color: #475569; display: inline-block; margin: 4px; font-size: 0.85rem; background: #f8fafc; transition: 0.2s; cursor: pointer; }
+        .zone-badge:hover { background: var(--secondary); color: white; border-color: var(--secondary); }
 
         .contact-section { padding: 100px 5%; background: var(--secondary); color: white; }
-        .form-card { background: white; padding: 40px; border-radius: 25px; color: var(--secondary); max-width: 800px; margin: 0 auto; }
-        input, select, textarea { width: 100%; padding: 14px; border: 1px solid #cbd5e1; border-radius: 10px; margin-bottom: 15px; font-family: inherit; }
-        .btn-submit { width: 100%; background: var(--primary); color: white; padding: 18px; border-radius: 10px; border: none; font-weight: 800; cursor: pointer; }
+        .form-card { background: white; padding: 40px; border-radius: 25px; color: var(--secondary); max-width: 800px; margin: 0 auto; box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
+        input, select, textarea { width: 100%; padding: 14px; border: 1px solid #cbd5e1; border-radius: 10px; margin-bottom: 15px; font-family: inherit; transition: 0.2s; }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1); }
+        .btn-submit { width: 100%; background: var(--primary); color: white; padding: 18px; border-radius: 10px; border: none; font-weight: 800; cursor: pointer; font-size: 1.1rem; transition: 0.3s; }
+        .btn-submit:hover { background: #ea580c; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(249, 115, 22, 0.3); }
         
         footer { background: #000; padding: 60px 5% 30px; color: #94a3b8; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; }
-        .floating-call { position: fixed; bottom: 20px; right: 20px; background: var(--success); color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: 800; z-index: 2000; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .floating-call { position: fixed; bottom: 20px; right: 20px; background: var(--success); color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: 800; z-index: 2000; box-shadow: 0 10px 20px rgba(34, 197, 94, 0.3); transition: 0.3s; }
+        .floating-call:hover { transform: scale(1.05); background: #16a34a; }
 
-        @media (max-width: 768px) { .main-nav { display: none; } }
+        @media (max-width: 768px) { .main-nav { display: none; } header { height: 70px; } .nav-phone { font-size: 1rem; padding: 6px 12px; } .logo-text { font-size: 1.2rem; } .logo-icon-pro { width: 36px; height: 36px; } }
     </style>
 </head>
 <body>
 
     <div id="gdpr-pro-banner">
-        <p style="font-weight: 800; margin-bottom: 10px;">Confidentialite et Securite</p>
+        <p style="font-weight: 800; margin-bottom: 10px;">🛡️ Confidentialité et Sécurité</p>
         <p style="font-size: 0.85rem; color: #64748b;">Nous utilisons des cookies pour optimiser votre demande d'intervention urgente.</p>
         <div class="gdpr-btns">
             <button style="background: var(--secondary); color: white;" onclick="this.closest('#gdpr-pro-banner').remove()">ACCEPTER</button>
@@ -109,8 +130,12 @@
 
     <header>
         <a href="#accueil" class="logo-container">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2L3 7V12C3 17.5 7.5 21.3 12 22C16.5 21.3 21 17.5 21 12V7L12 2Z" fill="#f97316"/> <path d="M12 7V13M12 13C10.9 13 10 13.9 10 15C10 16.1 10.9 17 12 17C13.1 17 14 16.1 14 15C14 13.9 13.1 13 12 13Z" stroke="white" stroke-width="2" stroke-linecap="round"/> </svg>
+            <div class="logo-icon-pro">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z" fill="#0f172a"/>
+                    <path d="M12 6C10.34 6 9 7.34 9 9C9 10.31 9.83 11.41 11 11.82V18H13V11.82C14.17 11.41 15 10.31 15 9C15 7.34 13.66 6 12 6ZM12 10.5C11.17 10.5 10.5 9.83 10.5 9C10.5 8.17 11.17 7.5 12 7.5C12.83 7.5 13.5 8.17 13.5 9C13.5 9.83 12.83 10.5 12 10.5Z" fill="#f97316"/>
+                </svg>
+            </div>
             <span class="logo-text">Sos <span>Serrurier</span></span>
         </a>
         <nav class="main-nav">
@@ -127,9 +152,9 @@
             <p style="font-weight: 800; font-size: 1.1rem; color: var(--secondary); text-transform: uppercase; margin-bottom: 5px;">SOS SERRURIER</p>
             <p style="color: var(--primary); font-weight: 800; margin-bottom: 15px; letter-spacing: 1px;">URGENCE VAR ET SUD 24/7</p>
             <h1>Serrurier Professionnel <br><span>Intervention en 30 Minutes</span></h1>
-            <p style="font-size: 1.3rem; margin-bottom: 40px; color: #1e293b; font-weight: 500;">Depannage immediat, ouverture de porte et securisation. Un tarif fixe annonce avant chaque intervention.</p>
+            <p style="font-size: 1.3rem; margin-bottom: 40px; color: #1e293b; font-weight: 500;">Dépannage immédiat, ouverture de porte et sécurisation. Un tarif fixe annoncé avant chaque intervention.</p>
             <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                <a href="tel:0753730112" style="background: var(--secondary); color: white; padding: 20px 40px; border-radius: 12px; text-decoration: none; font-weight: 800; font-size: 1.1rem;">APPEL D'URGENCE</a>
+                <a href="tel:0753730112" style="background: var(--secondary); color: white; padding: 20px 40px; border-radius: 12px; text-decoration: none; font-weight: 800; font-size: 1.1rem;">📞 APPEL D'URGENCE</a>
                 <a href="#contact" style="background: white; color: var(--secondary); padding: 20px 40px; border-radius: 12px; text-decoration: none; font-weight: 700; border: 1px solid #cbd5e1;">DEVIS GRATUIT</a>
             </div>
         </div>
@@ -144,23 +169,23 @@
 
     <section class="trust-section">
         <h2 style="font-size: 2.2rem;">Pourquoi travailler avec nous ?</h2>
-        <p style="color: #64748b; max-width: 800px; margin: 10px auto;">Nous garantissons une prestation de haute qualite pour votre securite et votre tranquillite d'esprit grace a un savoir-faire reconnu dans toute la region Var et Sud.</p>
+        <p style="color: #64748b; max-width: 800px; margin: 10px auto;">Nous garantissons une prestation de haute qualité pour votre sécurité et votre tranquillité d'esprit grâce à un savoir-faire reconnu dans toute la région Var et Sud.</p>
         <div class="trust-grid">
             <div class="trust-item">
                 <h4>Intervention rapide</h4>
-                <p>Nous comprenons l'urgence de votre situation. Presence sur les lieux en moins de 30 minutes grace a notre reseau de techniciens locaux mobiles 24h/24 et 7j/7.</p>
+                <p>Nous comprenons l'urgence de votre situation. Présence sur les lieux en moins de 30 minutes grâce à notre réseau de techniciens locaux mobiles 24h/24 et 7j/7.</p>
             </div>
             <div class="trust-item">
                 <h4>Tarification transparente</h4>
-                <p>La confiance commence par l'honnetete. Un devis clair et precis est etabli avant chaque intervention. Pas de frais caches, pas de mauvaises surprises sur la facture finale.</p>
+                <p>La confiance commence par l'honnêteté. Un devis clair et précis est établi avant chaque intervention. Pas de frais cachés, pas de mauvaises surprises sur la facture finale.</p>
             </div>
             <div class="trust-item">
-                <h4>Agreage Assurances</h4>
-                <p>Nos artisans sont certifies et nos interventions sont prises en charge par les assurances.</p>
+                <h4>Agréage Assurances</h4>
+                <p>Nos artisans sont certifiés et reconnus par les plus grandes compagnies d'assurances. Nos interventions respectent les procédures pour une prise en charge optimale de vos sinistres.</p>
             </div>
             <div class="trust-item">
-                <h4>Materiel certifie</h4>
-                <p>Utilisation exclusive de serrures et cylindres repondant aux normes de securite A2P.</p>
+                <h4>Matériel certifié</h4>
+                <p>Votre sécurité est notre priorité. Nous utilisons exclusivement des serrures, cylindres et systèmes de fermeture répondant aux normes de sécurité les plus strictes (A2P).</p>
             </div>
         </div>
     </section>
@@ -172,38 +197,38 @@
         <div class="services-grid">
             <div class="service-card">
                 <span class="price-tag">A partir de 50€</span>
-                <h3>Ouverture porte claquee</h3>
-                <p class="service-description">Ouverture technique sans degat pour les portes non verrouillees.</p>
+                <h3>Ouverture porte claquée</h3>
+                <p class="service-description">Ouverture technique sans dégât pour les portes non verrouillées.</p>
                 <a href="tel:0753730112" style="display: block; background: var(--secondary); color: white; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: 700;">COMMANDER</a>
             </div>
             <div class="service-card">
                 <span class="price-tag">A partir de 100€</span>
-                <h3>Ouverture porte fermee</h3>
-                <p class="service-description">Ouverture de porte verrouillee a cle avec materiel professionnel.</p>
+                <h3>Ouverture porte fermée</h3>
+                <p class="service-description">Ouverture de porte verrouillée à clé avec matériel professionnel.</p>
                 <a href="tel:0753730112" style="display: block; background: var(--secondary); color: white; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: 700;">COMMANDER</a>
             </div>
             <div class="service-card">
                 <span class="price-tag">A partir de 180€</span>
-                <h3>Ouverture porte blindee</h3>
-                <p class="service-description">Intervention experte sur portes haute securite et blindages A2P.</p>
+                <h3>Ouverture porte blindée</h3>
+                <p class="service-description">Intervention experte sur portes haute sécurité et blindages A2P.</p>
                 <a href="tel:0753730112" style="display: block; background: var(--secondary); color: white; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: 700;">COMMANDER</a>
             </div>
             <div class="service-card">
                 <span class="price-tag">Sur Devis Gratuit</span>
                 <h3>Changement de serrure</h3>
-                <p class="service-description">Remplacement immediat toutes marques Fichet, Picard, Vachette.</p>
+                <p class="service-description">Remplacement immédiat toutes marques Fichet, Picard, Vachette.</p>
                 <a href="#contact" style="display: block; background: var(--primary); color: white; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: 700;">DEMANDER PRIX</a>
             </div>
             <div class="service-card">
                 <span class="price-tag">Sur Devis Gratuit</span>
                 <h3>Blindage de porte</h3>
-                <p class="service-description">Renforcement de votre porte actuelle pour une securite optimale.</p>
+                <p class="service-description">Renforcement de votre porte actuelle pour une sécurité optimale.</p>
                 <a href="#contact" style="display: block; background: var(--primary); color: white; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: 700;">DEMANDER PRIX</a>
             </div>
             <div class="service-card">
                 <span class="price-tag">Urgence 24/7</span>
-                <h3>Mise en securite</h3>
-                <p class="service-description">Fermeture provisoire apres effraction ou perte de cles.</p>
+                <h3>Mise en sécurité</h3>
+                <p class="service-description">Fermeture provisoire après effraction ou perte de clés.</p>
                 <a href="tel:0753730112" style="display: block; background: #ef4444; color: white; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: 700;">URGENCE</a>
             </div>
         </div>
@@ -215,17 +240,17 @@
             <div class="review-card">
                 <div class="review-stars">★★★★★</div>
                 <span class="review-name">Jean-Marc P. (Toulon)</span>
-                <p>Intervention ultra rapide un dimanche soir. Le serrurier etait professionnel et le prix correspondait au devis annonce au telephone.</p>
+                <p>Intervention ultra rapide un dimanche soir. Le serrurier était professionnel et le prix correspondait au devis annoncé au téléphone.</p>
             </div>
             <div class="review-card">
                 <div class="review-stars">★★★★★</div>
                 <span class="review-name">Sophie L. (Nice)</span>
-                <p>Porte claquee avec les cles a l'interieur. Ouverture propre en 5 minutes sans rien casser. Merci pour l'efficacite !</p>
+                <p>Porte claquée avec les clés à l'intérieur. Ouverture propre en 5 minutes sans rien casser. Merci pour l'efficacité !</p>
             </div>
             <div class="review-card">
                 <div class="review-stars">★★★★★</div>
                 <span class="review-name">Thomas D. (Marseille)</span>
-                <p>Suite a une effraction, ils sont venus securiser la porte en pleine nuit. Tres rassurants et travail soigne.</p>
+                <p>Suite à une effraction, ils sont venus sécuriser la porte en pleine nuit. Très rassurants et travail soigné.</p>
             </div>
         </div>
     </section>
@@ -234,53 +259,62 @@
         <h2 style="margin-bottom: 40px;">Zones d'Intervention Prioritaires</h2>
         <div class="zone-group">
             <h4>Var (83)</h4>
-            <span class="zone-badge">Toulon 83000</span><span class="zone-badge">Hyeres 83400</span><span class="zone-badge">Frejus 83600</span><span class="zone-badge">Draguignan 83300</span><span class="zone-badge">La Seyne 83500</span><span class="zone-badge">Saint-Tropez 83990</span>
+            <span class="zone-badge">Toulon 83000</span><span class="zone-badge">Hyères 83400</span><span class="zone-badge">Fréjus 83600</span><span class="zone-badge">Draguignan 83300</span><span class="zone-badge">La Seyne 83500</span><span class="zone-badge">Saint-Tropez 83990</span>
         </div>
         <div class="zone-group">
             <h4>Alpes-Maritimes (06)</h4>
             <span class="zone-badge">Nice 06000</span><span class="zone-badge">Cannes 06400</span><span class="zone-badge">Antibes 06600</span><span class="zone-badge">Cagnes 06800</span><span class="zone-badge">Grasse 06130</span>
         </div>
         <div class="zone-group">
-            <h4>Bouches-du-Rhone (13)</h4>
+            <h4>Bouches-du-Rhône (13)</h4>
             <span class="zone-badge">Marseille 13000</span><span class="zone-badge">Aix-en-Provence 13100</span><span class="zone-badge">Aubagne 13400</span><span class="zone-badge">La Ciotat 13600</span>
         </div>
     </section>
 
     <section class="contact-section" id="contact">
         <div class="form-card">
-            <h2 style="text-align: center; margin-bottom: 25px;">Contact Prioritaire</h2>
+            <h2 style="text-align: center; margin-bottom: 25px;">Contact Prioritaire 24/7</h2>
             <form action="https://formspree.io/f/Sosfrance.contact@gmail.com" method="POST">
                 <input type="text" name="nom" placeholder="Nom complet" required>
-                <input type="tel" name="tel" placeholder="Votre Telephone" required>
+                <input type="tel" name="tel" placeholder="Votre Téléphone" required>
                 
                 <select name="service" required>
                     <option value="" disabled selected>Choisir un service...</option>
-                    <option value="Ouverture porte claquee (50€)">Ouverture porte claquee (des 50€)</option>
-                    <option value="Ouverture porte fermee (100€)">Ouverture porte fermee (des 100€)</option>
-                    <option value="Ouverture porte blindee (180€)">Ouverture porte blindee (des 180€)</option>
+                    <option value="Ouverture porte claquée (50€)">Ouverture porte claquée (dès 50€)</option>
+                    <option value="Ouverture porte fermée (100€)">Ouverture porte fermée (dès 100€)</option>
+                    <option value="Ouverture porte blindée (180€)">Ouverture porte blindée (dès 180€)</option>
                     <option value="Changement de serrure">Changement de serrure (Sur Devis)</option>
                     <option value="Blindage de porte">Blindage de porte (Sur Devis)</option>
-                    <option value="Mise en securite">Mise en securite d'urgence</option>
+                    <option value="Mise en sécurité">Mise en sécurité d'urgence</option>
                 </select>
 
-                <textarea name="message" rows="3" placeholder="Details de l'urgence..."></textarea>
+                <textarea name="message" rows="3" placeholder="Détails de l'urgence ou adresse..."></textarea>
                 <button type="submit" class="btn-submit">VALIDER LA DEMANDE</button>
             </form>
         </div>
     </section>
 
     <footer>
-        <div><h4 style="color: var(--primary);">SOS SERRURIER</h4><p>Urgence Var et Sud. SIRET: 994 413 227 00012</p></div>
-        <div><h4>Contact</h4><a href="tel:0753730112" style="color: var(--primary); font-weight: 800; text-decoration: none;">07 53 73 01 12</a></div>
-        <div><h4>Legal</h4><a href="#" style="color: #94a3b8; text-decoration: none; display: block;">Mentions Legales</a><a href="#" style="color: #94a3b8; text-decoration: none; display: block;">CGV</a></div>
+        <div>
+            <div class="logo-container" style="margin-bottom: 15px;">
+                <div class="logo-icon-pro" style="width: 36px; height: 36px;">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z" fill="#94a3b8"/>
+                        <path d="M12 6C10.34 6 9 7.34 9 9C9 10.31 9.83 11.41 11 11.82V18H13V11.82C14.17 11.41 15 10.31 15 9C15 7.34 13.66 6 12 6Z" fill="#f97316"/>
+                    </svg>
+                </div>
+                <span class="logo-text" style="color: var(--white); font-size: 1.2rem;">Sos <span>Serrurier</span></span>
+            </div>
+            <p>Urgence Var & Sud. SIRET: 994 413 227 00012</p>
+        </div>
+        <div><h4>Contact</h4><a href="tel:0753730112" style="color: var(--primary); font-weight: 800; text-decoration: none; font-size: 1.1rem;">07 53 73 01 12</a></div>
+        <div><h4>Légal</h4><a href="#" style="color: #94a3b8; text-decoration: none; display: block; margin-bottom: 5px;">Mentions Légales</a><a href="#" style="color: #94a3b8; text-decoration: none; display: block;">CGV</a></div>
     </footer>
 
-    <a href="tel:0753730112" class="floating-call">07 53 73 01 12 (24/7)</a>
+    <a href="tel:0753730112" class="floating-call">📞 07 53 73 01 12 (24/7)</a>
 
 </body>
 </html>
-
-    <a href="tel:0753730112" class="floating-call">07 53 73 01 12 (24/7)</a>
 
 </body>
 </html>
