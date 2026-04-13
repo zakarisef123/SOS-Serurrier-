@@ -69,14 +69,16 @@
 
         .hero {
             padding: 220px 5% 120px;
+            /* Principe identique : appel direct du fichier image */
             background: linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url('portrait-man-room-opening-door-with-hands-gloves.jpg');
             background-size: cover; background-position: center; background-repeat: no-repeat;
             text-align: center; display: flex; flex-direction: column; align-items: center;
         }
 
+        /* MARQUEE AVEC LOGOS (Images PNG/JPG fournies) */
         .marquee { overflow: hidden; white-space: nowrap; padding: 25px 0; background: var(--white); border-bottom: 1px solid #eee; }
-        .marquee-inner { display: inline-block; animation: scroll 40s linear infinite; }
-        .marquee-inner span { margin: 0 40px; font-weight: 800; color: #000000; font-size: 1.2rem; letter-spacing: 0.5px; }
+        .marquee-inner { display: inline-flex; animation: scroll 40s linear infinite; align-items: center; }
+        .marquee-inner img { height: 40px; margin: 0 50px; width: auto; max-width: 160px; }
         @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
         .trust-section { padding: 80px 5%; background: var(--white); text-align: center; }
@@ -161,8 +163,22 @@
 
     <div class="marquee">
         <div class="marquee-inner">
-            <span>AXA ASSURANCES</span><span>ALLIANZ</span><span>MAIF</span><span>MACIF</span><span>GROUPAMA</span><span>GENERALI</span><span>MATMUT</span><span>MAAF</span>
-            <span>AXA ASSURANCES</span><span>ALLIANZ</span><span>MAIF</span><span>MACIF</span><span>GROUPAMA</span><span>GENERALI</span><span>MATMUT</span><span>MAAF</span>
+            <img src="allianz.png" alt="Allianz">
+            <img src="maif.png" alt="Maif">
+            <img src="macif.png" alt="Macif">
+            <img src="groupama.png" alt="Groupama">
+            <img src="generali.png" alt="Generali">
+            <img src="matmut.png" alt="Matmut">
+            <img src="maaf.png" alt="Maaf">
+            <img src="axa.png" alt="Axa">
+            <img src="allianz.png" alt="Allianz">
+            <img src="maif.png" alt="Maif">
+            <img src="macif.png" alt="Macif">
+            <img src="groupama.png" alt="Groupama">
+            <img src="generali.png" alt="Generali">
+            <img src="matmut.png" alt="Matmut">
+            <img src="maaf.png" alt="Maaf">
+            <img src="axa.png" alt="Axa">
         </div>
     </div>
 
