@@ -44,7 +44,6 @@
             justify-content: space-between; padding: 0 5%; z-index: 1000;
         }
         .logo-container { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-        .logo-icon { background: var(--primary); padding: 8px; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
         .logo-text { font-weight: 800; font-size: 1.4rem; color: var(--secondary); text-transform: uppercase; }
         
         nav.main-nav { display: flex; gap: 20px; }
@@ -110,9 +109,8 @@
 
     <header>
         <a href="#accueil" class="logo-container">
-            <div class="logo-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3m-3-3l-2.5-2.5"/></svg>
-            </div>
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L3 7V12C3 17.5 7.5 21.3 12 22C16.5 21.3 21 17.5 21 12V7L12 2Z" fill="#f97316"/> <path d="M12 7V13M12 13C10.9 13 10 13.9 10 15C10 16.1 10.9 17 12 17C13.1 17 14 16.1 14 15C14 13.9 13.1 13 12 13Z" stroke="white" stroke-width="2" stroke-linecap="round"/> </svg>
             <span class="logo-text">Sos <span>Serrurier</span></span>
         </a>
         <nav class="main-nav">
@@ -158,11 +156,11 @@
             </div>
             <div class="trust-item">
                 <h4>Agreage Assurances</h4>
-                <p>Nos artisans sont certifies et reconnus par les plus grandes compagnies d'assurances. Nos interventions respectent les procedures pour une prise en charge optimale de vos sinistres.</p>
+                <p>Nos artisans sont certifies et nos interventions sont prises en charge par les assurances.</p>
             </div>
             <div class="trust-item">
                 <h4>Materiel certifie</h4>
-                <p>Votre securite est notre priorite. Nous utilisons exclusivement des serrures, cylindres et systemes de fermeture repondant aux normes de securite les plus strictes (A2P).</p>
+                <p>Utilisation exclusive de serrures et cylindres repondant aux normes de securite A2P.</p>
             </div>
         </div>
     </section>
@@ -276,6 +274,11 @@
         <div><h4>Contact</h4><a href="tel:0753730112" style="color: var(--primary); font-weight: 800; text-decoration: none;">07 53 73 01 12</a></div>
         <div><h4>Legal</h4><a href="#" style="color: #94a3b8; text-decoration: none; display: block;">Mentions Legales</a><a href="#" style="color: #94a3b8; text-decoration: none; display: block;">CGV</a></div>
     </footer>
+
+    <a href="tel:0753730112" class="floating-call">07 53 73 01 12 (24/7)</a>
+
+</body>
+</html>
 
     <a href="tel:0753730112" class="floating-call">07 53 73 01 12 (24/7)</a>
 
