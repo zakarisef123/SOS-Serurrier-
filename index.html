@@ -53,17 +53,11 @@
         .nav-phone { color: var(--success); font-weight: 800; text-decoration: none; font-size: 1.2rem; border: 2px solid var(--success); padding: 8px 15px; border-radius: 10px; transition: 0.3s; }
         .nav-phone:hover { background: var(--success); color: white; }
 
-        /* SECTION HERO - MISE À JOUR DE L'IMAGE */
         .hero {
             padding: 220px 5% 120px;
             background: linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url('portrait-man-room-opening-door-with-hands-gloves.jpg');
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat;
-            text-align: center; 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center;
+            background-size: cover; background-position: center; background-repeat: no-repeat;
+            text-align: center; display: flex; flex-direction: column; align-items: center;
         }
 
         .marquee { overflow: hidden; white-space: nowrap; padding: 25px 0; background: var(--white); border-bottom: 1px solid #eee; }
@@ -74,6 +68,7 @@
         .trust-section { padding: 80px 5%; background: var(--white); text-align: center; }
         .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1200px; margin: 40px auto 0; }
         .trust-item h4 { color: var(--primary); margin-bottom: 10px; font-size: 1.2rem; }
+        .trust-item p { font-size: 0.95rem; color: #64748b; }
 
         .services-section { padding: 80px 5%; background: var(--bg-light); }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; }
@@ -131,6 +126,7 @@
 
     <section class="hero" id="accueil">
         <div class="hero-content">
+            <p style="font-weight: 800; font-size: 1.1rem; color: var(--secondary); text-transform: uppercase; margin-bottom: 5px;">SOS SERRURIER</p>
             <p style="color: var(--primary); font-weight: 800; margin-bottom: 15px; letter-spacing: 1px;">URGENCE VAR ET SUD 24/7</p>
             <h1>Serrurier Professionnel <br><span>Intervention en 30 Minutes</span></h1>
             <p style="font-size: 1.3rem; margin-bottom: 40px; color: #1e293b; font-weight: 500;">Depannage immediat, ouverture de porte et securisation. Un tarif fixe annonce avant chaque intervention.</p>
@@ -150,23 +146,23 @@
 
     <section class="trust-section">
         <h2 style="font-size: 2.2rem;">Pourquoi travailler avec nous ?</h2>
-        <p style="color: #64748b; max-width: 800px; margin: 10px auto;">Nous garantissons une prestation de haute qualite pour votre securite et votre tranquillite d'esprit.</p>
+        <p style="color: #64748b; max-width: 800px; margin: 10px auto;">Nous garantissons une prestation de haute qualite pour votre securite et votre tranquillite d'esprit grace a un savoir-faire reconnu dans toute la region Var et Sud.</p>
         <div class="trust-grid">
             <div class="trust-item">
                 <h4>Intervention rapide</h4>
-                <p>Presence sur les lieux en moins de 30 minutes grace a nos techniciens locaux.</p>
+                <p>Nous comprenons l'urgence de votre situation. Presence sur les lieux en moins de 30 minutes grace a notre reseau de techniciens locaux mobiles 24h/24 et 7j/7.</p>
             </div>
             <div class="trust-item">
                 <h4>Tarification transparente</h4>
-                <p>Devis etabli avant chaque intervention. Pas de frais caches ni de surprises.</p>
+                <p>La confiance commence par l'honnetete. Un devis clair et precis est etabli avant chaque intervention. Pas de frais caches, pas de mauvaises surprises sur la facture finale.</p>
             </div>
             <div class="trust-item">
                 <h4>Agreage Assurances</h4>
-                <p>Nos artisans sont certifies et nos interventions sont prises en charge par les assurances.</p>
+                <p>Nos artisans sont certifies et reconnus par les plus grandes compagnies d'assurances. Nos interventions respectent les procedures pour une prise en charge optimale de vos sinistres.</p>
             </div>
             <div class="trust-item">
                 <h4>Materiel certifie</h4>
-                <p>Utilisation exclusive de serrures et cylindres repondant aux normes de securite A2P.</p>
+                <p>Votre securite est notre priorite. Nous utilisons exclusivement des serrures, cylindres et systemes de fermeture repondant aux normes de securite les plus strictes (A2P).</p>
             </div>
         </div>
     </section>
