@@ -9,6 +9,23 @@
       gtag('config', 'AW-18049108666');
     </script>
 
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-18049108666/q_SoCO-noZ0cELqVvp5D',
+            'value': 1.0,
+            'currency': 'EUR',
+            'event_callback': callback
+        });
+        return false;
+      }
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Serrurier Var & Sud : Dépannage Ultra-Rapide | SOS SERRURIER</title>
@@ -153,7 +170,7 @@
             <a href="#intervention">Zones</a>
             <a href="#contact">Contact</a>
         </nav>
-        <a href="tel:0753730112" class="nav-phone-btn">📞</a>
+        <a href="tel:0753730112" onclick="return gtag_report_conversion('tel:0753730112');" class="nav-phone-btn">📞</a>
     </header>
 
     <section class="hero" id="accueil">
@@ -162,7 +179,7 @@
             <h1>Serrurier Professionnel <br><span>Intervention en 30 Minutes</span></h1>
             <p style="font-size: 1.1rem; margin-bottom: 20px; color: #1e293b; font-weight: 500; max-width: 700px;">Dépannage immédiat 24/7 dans le Var et le Sud.</p>
             <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                <a href="tel:0753730112" style="background: var(--secondary); color: white; padding: 15px 30px; border-radius: 12px; text-decoration: none; font-weight: 800; font-size: 1.1rem;">📞 APPEL D'URGENCE</a>
+                <a href="tel:0753730112" onclick="return gtag_report_conversion('tel:0753730112');" style="background: var(--secondary); color: white; padding: 15px 30px; border-radius: 12px; text-decoration: none; font-weight: 800; font-size: 1.1rem;">📞 APPEL D'URGENCE</a>
                 <a href="#contact" style="background: white; color: var(--secondary); padding: 15px 30px; border-radius: 12px; text-decoration: none; font-weight: 700; border: 1px solid #cbd5e1;">DEVIS GRATUIT</a>
             </div>
         </div>
@@ -184,19 +201,19 @@
                 <span class="price-tag">À partir de 50€</span>
                 <h3>Ouverture porte claquée</h3>
                 <p class="service-description">Ouverture technique sans dégât pour les portes non verrouillées.</p>
-                <a href="tel:0753730112" style="display: block; background: var(--secondary); color: white; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: 700;">COMMANDER</a>
+                <a href="tel:0753730112" onclick="return gtag_report_conversion('tel:0753730112');" style="display: block; background: var(--secondary); color: white; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: 700;">COMMANDER</a>
             </div>
             <div class="service-card">
                 <span class="price-tag">À partir de 100€</span>
                 <h3>Ouverture porte fermée</h3>
                 <p class="service-description">Ouverture de porte verrouillée à clé avec matériel professionnel.</p>
-                <a href="tel:0753730112" style="display: block; background: var(--secondary); color: white; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: 700;">COMMANDER</a>
+                <a href="tel:0753730112" onclick="return gtag_report_conversion('tel:0753730112');" style="display: block; background: var(--secondary); color: white; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: 700;">COMMANDER</a>
             </div>
             <div class="service-card">
                 <span class="price-tag">À partir de 180€</span>
                 <h3>Ouverture porte blindée</h3>
                 <p class="service-description">Intervention experte sur portes haute sécurité et blindages A2P.</p>
-                <a href="tel:0753730112" style="display: block; background: var(--secondary); color: white; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: 700;">COMMANDER</a>
+                <a href="tel:0753730112" onclick="return gtag_report_conversion('tel:0753730112');" style="display: block; background: var(--secondary); color: white; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: 700;">COMMANDER</a>
             </div>
             <div class="service-card">
                 <span class="price-tag">Sur Devis Gratuit</span>
@@ -214,7 +231,7 @@
                 <span class="price-tag">Urgence 24/7</span>
                 <h3>Mise en sécurité</h3>
                 <p class="service-description">Fermeture provisoire après effraction ou perte de clés.</p>
-                <a href="tel:0753730112" style="display: block; background: #ef4444; color: white; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: 700;">URGENCE</a>
+                <a href="tel:0753730112" onclick="return gtag_report_conversion('tel:0753730112');" style="display: block; background: #ef4444; color: white; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: 700;">URGENCE</a>
             </div>
         </div>
     </section>
@@ -309,6 +326,11 @@
     <footer>
         <p>© 2026 SOS SERRURIER - Dépannage 24h/24 dans le Var et le Sud</p>
     </footer>
+
+    <a href="tel:0753730112" onclick="return gtag_report_conversion('tel:0753730112');" class="floating-call">📞 07 53 73 01 12 (24/7)</a>
+
+</body>
+</html>
 
     <a href="tel:0753730112" class="floating-call">📞 07 53 73 01 12 (24/7)</a>
 
