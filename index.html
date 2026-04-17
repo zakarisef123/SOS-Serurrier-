@@ -4,15 +4,14 @@
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtag/js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-PWXXZN4K');</script>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GT-WBLVJMGR"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18049108666"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'GT-WBLVJMGR');
       gtag('config', 'AW-18049108666');
     </script>
 
@@ -77,9 +76,6 @@
         .nav-phone-btn { 
             text-decoration: none; 
             font-size: 1.8rem;
-            background: transparent;
-            border: none;
-            box-shadow: none;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -295,7 +291,7 @@
                     <option value="Mise en sécurité">Mise en sécurité d'urgence</option>
                 </select>
                 <textarea name="message" rows="3" placeholder="Détails de l'urgence ou adresse..."></textarea>
-                <button type="submit" class="btn-submit">VALIDER LA DEMANDE</button>
+                <button type="submit" onclick="return gtag_report_conversion();" class="btn-submit">VALIDER LA DEMANDE</button>
             </form>
         </div>
     </section>
@@ -320,6 +316,10 @@
         <p>© 2026 SOS SERRURIER - Dépannage 24h/24 dans le Var et le Sud</p>
     </footer>
 
+    <a href="tel:0753730112" onclick="return gtag_report_conversion('tel:0753730112');" class="floating-call">📞 07 53 73 01 12 (24/7)</a>
+
+</body>
+</html>
     <a href="tel:0753730112" onclick="return gtag_report_conversion('tel:0753730112');" class="floating-call">📞 07 53 73 01 12 (24/7)</a>
 
 </body>
