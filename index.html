@@ -1,6 +1,12 @@
 <!doctype html>
 <html lang="fr">
 <head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtag/js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PWXXZN4K');</script>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18049108666"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -61,15 +67,43 @@
             justify-content: space-between; padding: 0 5%; z-index: 1000;
         }
         .logo-container { display: flex; align-items: center; text-decoration: none; }
-        .logo-icon-pro { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: var(--white); border-radius: 10px; box-shadow: 0 4px 6px rgba(15, 23, 42, 0.08); border: 1px solid #e2e8f0; }
+        
+        /* Modifié selon ta demande : retrait du fond blanc et de l'ombre */
+        .logo-icon-pro { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            width: 44px; 
+            height: 44px; 
+            background: transparent;
+        }
+        
         nav.main-nav { display: flex; gap: 20px; }
         nav.main-nav a { text-decoration: none; color: var(--secondary); font-weight: 600; font-size: 0.9rem; transition: 0.2s; }
         nav.main-nav a:hover { color: var(--primary); }
 
-        .nav-phone-btn { background: var(--success); color: white; padding: 12px 20px; border-radius: 50px; text-decoration: none; font-weight: 800; display: flex; align-items: center; justify-content: center; transition: 0.3s; box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3); font-size: 1.2rem; }
+        .nav-phone-btn { 
+            background: var(--success); 
+            color: white; 
+            padding: 12px 20px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 800; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            transition: 0.3s;
+            box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+            font-size: 1.2rem;
+        }
         .nav-phone-btn:hover { transform: scale(1.05); background: #16a34a; }
 
-        .hero { padding: 110px 5% 40px; background: linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url('portrait-man-room-opening-door-with-hands-gloves.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; text-align: center; display: flex; flex-direction: column; align-items: center; }
+        .hero {
+            padding: 110px 5% 40px; 
+            background: linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url('portrait-man-room-opening-door-with-hands-gloves.jpg');
+            background-size: cover; background-position: center; background-repeat: no-repeat;
+            text-align: center; display: flex; flex-direction: column; align-items: center;
+        }
         .hero h1 { font-size: 2.2rem; line-height: 1.2; margin-bottom: 10px; }
 
         .marquee { overflow: hidden; white-space: nowrap; padding: 20px 0; background: var(--white); border-bottom: 1px solid #eee; }
@@ -115,6 +149,8 @@
     </style>
 </head>
 <body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWXXZN4K"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div id="gdpr-pro-banner">
         <p style="font-weight: 800; margin-bottom: 10px;">🛡️ Confidentialité et Sécurité</p>
@@ -299,5 +335,4 @@
     <a href="tel:0753730112" onclick="return gtag_report_conversion('tel:0753730112');" class="floating-call">📞 07 53 73 01 12 (24/7)</a>
 
 </body>
-</html>
 </html>
