@@ -17,20 +17,20 @@
     </script>
 
     <script>
-      function gtag_report_conversion(url) {
-        var callback = function () {
-          if (typeof(url) != 'undefined') {
-            window.location = url;
-          }
-        };
-        gtag('event', 'conversion', {
-            'send_to': 'AW-18049108666/q_SoCO-noZ0cELqVvp5D',
-            'value': 1.0,
-            'currency': 'EUR',
-            'event_callback': callback
-        });
-        return false;
-      }
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-18049108666/hJe2CNK-2J0cELqVvp5D',
+          'value': 1.0,
+          'currency': 'EUR',
+          'event_callback': callback
+      });
+      return false;
+    }
     </script>
 
     <meta charset="UTF-8" />
@@ -68,23 +68,21 @@
             justify-content: space-between; padding: 0 5%; z-index: 1000;
         }
         .logo-container { display: flex; align-items: center; text-decoration: none; }
-        
-        .logo-icon-pro { 
-            display: flex; align-items: center; justify-content: center; 
-            width: 44px; height: 44px; background: transparent; 
-        }
+        .logo-icon-pro { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: transparent; }
         
         nav.main-nav { display: flex; gap: 20px; }
         nav.main-nav a { text-decoration: none; color: var(--secondary); font-weight: 600; font-size: 0.9rem; transition: 0.2s; }
         nav.main-nav a:hover { color: var(--primary); }
 
-        /* Style du bouton téléphone épuré (sans vert, sans texte) */
         .nav-phone-btn { 
             text-decoration: none; 
             font-size: 1.8rem;
             background: transparent;
             border: none;
             box-shadow: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .hero {
